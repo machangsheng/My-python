@@ -1,0 +1,14 @@
+># coding=utf8
+import urllib2
+response = urllib2.urlopen("https://www.zhihu.com")
+html = response.read()
+
+def n_t(name, msg):
+    desktop_path = 'F:\\'
+    full_path = desktop_path + name + '.txt'
+    file = open(full_path,'w')
+    file.write(msg)
+    file.close()
+    print ('Done')
+n_t('asdfawsdfwawe',html)
+
